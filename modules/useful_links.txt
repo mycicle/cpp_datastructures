@@ -1,0 +1,12 @@
+***** https://build2.org/doc/modules-cppcon2017.pdf   *****
+***** https://quuxplusone.github.io/blog/2019/11/07/modular-hello-world/ *****
+https://releases.llvm.org/download.html
+https://llvm.org/docs/GettingStarted.html#checkout
+https://github.com/llvm/llvm-project
+https://stackoverflow.com/questions/33307657/how-do-i-use-c-modules-in-clang
+https://vector-of-bool.github.io/2019/03/31/modules-2.html
+https://clang.llvm.org/docs/Modules.html
+https://clang.llvm.org/get_started.html
+https://clang.llvm.org/docs/Modules.html#modularizing-a-platform
+https://clang.llvm.org/docs/Modules.html#using-modules
+https://stackoverflow.com/questions/9148488/how-do-i-compile-c-with-clang
