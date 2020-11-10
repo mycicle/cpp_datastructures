@@ -10,3 +10,4 @@ https://clang.llvm.org/get_started.html
 https://clang.llvm.org/docs/Modules.html#modularizing-a-platform
 https://clang.llvm.org/docs/Modules.html#using-modules
 https://stackoverflow.com/questions/9148488/how-do-i-compile-c-with-clang
+https://stackoverflow.com/questions/38248216/building-clang-taking-forever
