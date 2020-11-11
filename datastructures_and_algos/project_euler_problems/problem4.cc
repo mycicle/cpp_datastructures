@@ -7,14 +7,22 @@
 using namespace std;
 
 bool isPalindrome(int n) {
-    string number = to_string(n);
-    char *backwards = new char[number.length()];
-    int j = 0;
-    for (int i = number.length()-1; i >= 0; i++, j++) {
-        backwards[j] = number[i];
+    string num = to_string(n);
+    int length = num.length();
+    const char *number = num.c_str();
+    int start = 0;
+    int end = length-1;
+    bool palindrome = true;
+    for (int i = 0; i < length/2; i++) {
+        if (number[start] != number[end]) {
+            palindrome = false;
+            break;  
+        }       
+        start++; 
+        end--;
     }
 
-    return atoi(backwards) == n;
+    return palindrome;
 }
 
 int main() {
@@ -26,6 +34,7 @@ int main() {
         int current = a*b;
         if (isPalindrome(current)) {
             largestPalindrome = current;
+            cout << "largest palindrome " << current << endl;
             break;
         }
         if (i % 2 == 0) {
