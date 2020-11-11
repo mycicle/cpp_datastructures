@@ -171,7 +171,7 @@ class Body {
 				if (isnan(velocity_mag))
 					velocity_mag = 0;
 				b.vel = velocity_unit * velocity_mag; 
-				cout << "velocity " << b.vel << endl;
+
 				Vec3d acceleration = (b.vel.perpendicular2D() * b.vel.perpendicular2D()).handleNan() / rad;
 				b.acc = acceleration.handleNan();
 		}
@@ -224,7 +224,6 @@ int main() {
     long double earthYear = 365.2425 *  24  * 60 * 60;
     const int numTimeSteps = 1000;
     long double dt = earthYear / numTimeSteps;
-	cout << s << endl;
     for (int i = 0; i < numTimeSteps; i++)
         s.timeStep(dt);
     cout << s; // print out the state of the solar system (where each object is, location only)
