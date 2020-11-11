@@ -6,7 +6,6 @@
 #include <vector>
 #include <iostream>
 #include <memory.h>
-
 using namespace std;
 
 vector<long long int> eratosthenes(long long int length) {
@@ -46,7 +45,10 @@ long long int largestPrimeFactor(long long int n, vector<long long int>& primes)
                 n = n/primes[i];
                 largest = primes[i];
             }
-        }     
+        } 
+        // optimization to stop the loop when you reach the largest prime factor
+        if (n < primes[i])
+            break;    
     }
 
     if (largest == 1)
