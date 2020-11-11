@@ -56,7 +56,7 @@ long long int largestPrimeFactor(long long int n, vector<long long int>& primes)
 }
 
 int main() {
-    long long int length = 1e6;
+    long long int length = 1e4;
     long long int n = 600851475143;
     vector<long long int> primes = eratosthenes(length);
     long long int lpf = largestPrimeFactor(n, primes);
