@@ -27,23 +27,25 @@ bool isPalindrome(int n) {
 
 int main() {
     int largestPalindrome = 0;
-    int a = 999;
-    int b = 999;
-    int i;
-    for (i = 0; i < a*b; i++) {
-        int current = a*b;
-        if (isPalindrome(current)) {
-            largestPalindrome = current;
-            cout << "largest palindrome " << current << endl;
+    int iterations = 0;
+    int a_max = 0;
+    int b_max = 0;
+    for (int a = 999; a > 100; a--) {
+        if (a_max*b_max > a*999)
             break;
-        }
-        if (i % 2 == 0) {
-            a--;
-        } else {
-            b--;
+        for (int b = 999; b > 100; b--) {
+            iterations++;
+            int current = a*b;
+            if (isPalindrome(current)) {
+                if (current > largestPalindrome) {
+                    a_max = a; b_max = b;
+                    largestPalindrome = current;   
+                }
+                break;
+            }
         }
     }
 
-    cout << "The largest palindrome is formed by multiplying " << a << " and " << b << " and is " << largestPalindrome << endl;
-    cout << "That took " << i << " iterations to solve" << endl;
+    cout << "The largest palindrome is formed by multiplying " << a_max << " and " << b_max << " and is " << largestPalindrome << endl;
+    cout << "That took " << iterations << " iterations to solve" << endl;
 }
