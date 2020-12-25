@@ -35,8 +35,8 @@ class Vec2d {
             return a;
         }
         // Move constructor!
-        Vec2d(Vec2d&& v): x(x), y(y) {
-            swap(p, v.p);
+        Vec2d(Vec2d&& v): x(x), y(y), p(v.p) {
+            v.p = nullptr;
         } 
         //Copy Constructor
         Vec2d(const Vec2d& orig):x(orig.x),y(orig.y),length(orig.length){
